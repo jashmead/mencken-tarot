@@ -6,4 +6,5 @@ class Deck < ActiveRecord::Base
   has_one :person
   has_many :cards, :dependent => :destroy
   has_many :spreads, :dependent => :nullify
+  has_many :readings, :dependent => :nullify
 end

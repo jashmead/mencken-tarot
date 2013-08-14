@@ -1,4 +1,6 @@
 Mt::Application.routes.draw do
+  resources :readings
+
   resources :positions
 
   resources :spreads
