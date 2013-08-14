@@ -3,6 +3,14 @@
 Mencken Tarot Setup
 
 * Ruby 2.0.0, Rails 4.0.0
+  
+* initial rails/ruby setup:
+  1 rails new mt
+  2 fix Gemfile to make previous working
+  3 fix database.yml to point to 'mt' databases
+  4 git setup, as below
+  5 rails generate rspec:install
+  6 bundle update && bundle install
 
 * Requires database user 'mencken' and databases (locally) mt_development & mt_test
 
