@@ -1,0 +1,23 @@
+== README
+
+Mencken Tarot Setup
+
+* Ruby 2.0.0, Rails 4.0.0
+
+* Requires database user 'mencken' and databases (locally) mt_development & mt_test
+
+* Database is Postgres 9.2 for development & production
+
+* Use xt to run test suite locally, yt to go to current test page, zt to test on heroku
+
+* zt deploys to heroku, then tests
+
+* gitty:  gb to see branches, gic to commit, gm to merge back to master (do before a 'zt')
+
+* git setup:
+  git remote add origin https://github.com/jashmead/mencken-tarot.git
+  git push -u origin master
+
+* heroku setup:
+  heroku create
+  -- then fix heroku to point to mencken-tarot as git repo
