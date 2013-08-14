@@ -1,0 +1,65 @@
+<%= form_for(@card) do |f| %>
+  <% if @card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% @card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :major_arcana %><br>
+    <%= f.check_box :major_arcana %>
+  </div>
+  <div class="field">
+    <%= f.label :suit %><br>
+    <%= f.text_field :suit %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :tags_plus %><br>
+    <%= f.text_field :tags_plus %>
+  </div>
+  <div class="field">
+    <%= f.label :tags_minus %><br>
+    <%= f.text_field :tags_minus %>
+  </div>
+  <div class="field">
+    <%= f.label :text_forward %><br>
+    <%= f.text_field :text_forward %>
+  </div>
+  <div class="field">
+    <%= f.label :text_reversed %><br>
+    <%= f.text_field :text_reversed %>
+  </div>
+  <div class="field">
+    <%= f.label :deck_id %><br>
+    <%= f.number_field :deck_id %>
+  </div>
+  <div class="field">
+    <%= f.label :card_image_upright %><br>
+    <%= f.text_field :card_image_upright %>
+  </div>
+  <div class="field">
+    <%= f.label :card_image_reversed %><br>
+    <%= f.text_field :card_image_reversed %>
+  </div>
+  <div class="field">
+    <%= f.label :card_thumbnail %><br>
+    <%= f.text_field :card_thumbnail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

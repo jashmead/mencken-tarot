@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @card.name %>
+</p>
+
+<p>
+  <strong>Major arcana:</strong>
+  <%= @card.major_arcana %>
+</p>
+
+<p>
+  <strong>Suit:</strong>
+  <%= @card.suit %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @card.description %>
+</p>
+
+<p>
+  <strong>Tags plus:</strong>
+  <%= @card.tags_plus %>
+</p>
+
+<p>
+  <strong>Tags minus:</strong>
+  <%= @card.tags_minus %>
+</p>
+
+<p>
+  <strong>Text forward:</strong>
+  <%= @card.text_forward %>
+</p>
+
+<p>
+  <strong>Text reversed:</strong>
+  <%= @card.text_reversed %>
+</p>
+
+<p>
+  <strong>Deck:</strong>
+  <%= @card.deck_id %>
+</p>
+
+<p>
+  <strong>Card image upright:</strong>
+  <%= @card.card_image_upright %>
+</p>
+
+<p>
+  <strong>Card image reversed:</strong>
+  <%= @card.card_image_reversed %>
+</p>
+
+<p>
+  <strong>Card thumbnail:</strong>
+  <%= @card.card_thumbnail %>
+</p>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

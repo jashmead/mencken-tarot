@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130814192749) do
+ActiveRecord::Schema.define(version: 20130814211633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: true do |t|
+    t.string   "name"
+    t.boolean  "major_arcana"
+    t.string   "suit"
+    t.string   "description"
+    t.string   "tags_plus"
+    t.string   "tags_minus"
+    t.string   "text_forward"
+    t.string   "text_reversed"
+    t.integer  "deck_id"
+    t.binary   "card_image_upright"
+    t.binary   "card_image_reversed"
+    t.binary   "card_thumbnail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "decks", force: true do |t|
     t.string   "name"
