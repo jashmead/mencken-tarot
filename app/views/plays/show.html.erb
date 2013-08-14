@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Play order:</strong>
+  <%= @play.play_order %>
+</p>
+
+<p>
+  <strong>Play normal:</strong>
+  <%= @play.play_normal %>
+</p>
+
+<p>
+  <strong>Play tags:</strong>
+  <%= @play.play_tags %>
+</p>
+
+<p>
+  <strong>Play text:</strong>
+  <%= @play.play_text %>
+</p>
+
+<%= link_to 'Edit', edit_play_path(@play) %> |
+<%= link_to 'Back', plays_path %>

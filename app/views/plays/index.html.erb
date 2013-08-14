@@ -1,0 +1,33 @@
+<h1>Listing plays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Play order</th>
+      <th>Play normal</th>
+      <th>Play tags</th>
+      <th>Play text</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plays.each do |play| %>
+      <tr>
+        <td><%= play.play_order %></td>
+        <td><%= play.play_normal %></td>
+        <td><%= play.play_tags %></td>
+        <td><%= play.play_text %></td>
+        <td><%= link_to 'Show', play %></td>
+        <td><%= link_to 'Edit', edit_play_path(play) %></td>
+        <td><%= link_to 'Destroy', play, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Play', new_play_path %>

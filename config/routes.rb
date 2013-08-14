@@ -1,4 +1,6 @@
 Mt::Application.routes.draw do
+  resources :plays
+
   resources :readings
 
   resources :positions
