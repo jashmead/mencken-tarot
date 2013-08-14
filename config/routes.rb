@@ -1,4 +1,8 @@
 Mt::Application.routes.draw do
+  resources :positions
+
+  resources :spreads
+
   resources :cards
 
   resources :decks

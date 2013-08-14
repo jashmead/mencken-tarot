@@ -5,4 +5,5 @@ class Deck < ActiveRecord::Base
   validates_uniqueness_of :name
   has_one :person
   has_many :cards, :dependent => :destroy
+  has_many :spreads, :dependent => :nullify
 end

@@ -1,0 +1,31 @@
+<h1>Listing spreads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Master spread</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spreads.each do |spread| %>
+      <tr>
+        <td><%= spread.name %></td>
+        <td><%= spread.description %></td>
+        <td><%= spread.master_spread %></td>
+        <td><%= link_to 'Show', spread %></td>
+        <td><%= link_to 'Edit', edit_spread_path(spread) %></td>
+        <td><%= link_to 'Destroy', spread, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spread', new_spread_path %>

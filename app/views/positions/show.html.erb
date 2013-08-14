@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position order:</strong>
+  <%= @position.position_order %>
+</p>
+
+<p>
+  <strong>Position x:</strong>
+  <%= @position.position_x %>
+</p>
+
+<p>
+  <strong>Position y:</strong>
+  <%= @position.position_y %>
+</p>
+
+<p>
+  <strong>Meaning normal:</strong>
+  <%= @position.meaning_normal %>
+</p>
+
+<p>
+  <strong>Meaning reversed:</strong>
+  <%= @position.meaning_reversed %>
+</p>
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>
