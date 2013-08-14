@@ -11,6 +11,7 @@ Mencken Tarot Setup
   4 git setup, as below
   5 rails generate rspec:install
   6 bundle update && bundle install
+  7 fixed up secret_token to be more dynamic (see tutorial for explanation)
 
 * Requires database user 'mencken' and databases (locally) mt_development & mt_test
 
@@ -20,7 +21,7 @@ Mencken Tarot Setup
 
 * zt deploys to heroku, then tests
 
-* gitty:  
+* git stuff
   gb to see branches, 
   gic to commit, 
   gm to merge back to master (do before a 'zt'),
