@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130814211633) do
+ActiveRecord::Schema.define(version: 20130814212749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,12 +25,12 @@ ActiveRecord::Schema.define(version: 20130814211633) do
     t.string   "tags_minus"
     t.string   "text_forward"
     t.string   "text_reversed"
-    t.integer  "deck_id"
     t.binary   "card_image_upright"
     t.binary   "card_image_reversed"
     t.binary   "card_thumbnail"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "deck_id"
   end
 
   create_table "decks", force: true do |t|
