@@ -8,7 +8,7 @@ describe "decks/index" do
         :summary => "Summary",
         :description => "MyText",
         :cloned_from_id => 1,
-        :creator_id => 2,
+        :person_id => 2,
         :deck_status => "Deck Status"
       ),
       stub_model(Deck,
@@ -16,7 +16,7 @@ describe "decks/index" do
         :summary => "Summary",
         :description => "MyText",
         :cloned_from_id => 1,
-        :creator_id => 2,
+        :person_id => 2,
         :deck_status => "Deck Status"
       )
     ])

@@ -7,14 +7,14 @@ describe "people/index" do
         :name => "Name",
         :email => "Email",
         :about_me => "MyText",
-        :deck_id => 1,
+        :preferences => 1,
         :person_status => "Person Status"
       ),
       stub_model(Person,
         :name => "Name",
         :email => "Email",
         :about_me => "MyText",
-        :deck_id => 1,
+        :preferences => 1,
         :person_status => "Person Status"
       )
     ])

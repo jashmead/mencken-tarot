@@ -7,7 +7,7 @@ describe "decks/new" do
       :summary => "MyString",
       :description => "MyText",
       :cloned_from_id => 1,
-      :creator_id => 1,
+      :person_id => 1,
       :deck_status => "MyString"
     ).as_new_record)
   end
@@ -21,7 +21,7 @@ describe "decks/new" do
       assert_select "input#deck_summary[name=?]", "deck[summary]"
       assert_select "textarea#deck_description[name=?]", "deck[description]"
       assert_select "input#deck_cloned_from_id[name=?]", "deck[cloned_from_id]"
-      assert_select "input#deck_creator_id[name=?]", "deck[creator_id]"
+      assert_select "input#deck_person_id[name=?]", "deck[person_id]"
       assert_select "input#deck_deck_status[name=?]", "deck[deck_status]"
     end
   end

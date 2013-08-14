@@ -6,7 +6,7 @@ describe "people/show" do
       :name => "Name",
       :email => "Email",
       :about_me => "MyText",
-      :deck_id => 1,
+      :preferences => 1,
       :person_status => "Person Status"
     ))
   end

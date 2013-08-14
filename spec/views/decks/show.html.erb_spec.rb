@@ -7,7 +7,7 @@ describe "decks/show" do
       :summary => "Summary",
       :description => "MyText",
       :cloned_from_id => 1,
-      :creator_id => 2,
+      :person_id => 2,
       :deck_status => "Deck Status"
     ))
   end

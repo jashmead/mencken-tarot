@@ -6,7 +6,7 @@ describe "people/edit" do
       :name => "MyString",
       :email => "MyString",
       :about_me => "MyText",
-      :deck_id => 1,
+      :preferences => 1,
       :person_status => "MyString"
     ))
   end
@@ -19,7 +19,7 @@ describe "people/edit" do
       assert_select "input#person_name[name=?]", "person[name]"
       assert_select "input#person_email[name=?]", "person[email]"
       assert_select "textarea#person_about_me[name=?]", "person[about_me]"
-      assert_select "input#person_deck_id[name=?]", "person[deck_id]"
+      assert_select "textarea#person_preferences[name=?]", "person[preferences]"
       assert_select "input#person_person_status[name=?]", "person[person_status]"
     end
   end
