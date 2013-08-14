@@ -30,6 +30,13 @@ describe StaticPagesController do
     end
   end
 
+  describe "GET 'plans'" do
+    it "returns http success" do
+      get 'plans'
+      response.should be_success
+    end
+  end
+
   describe "GET 'splash'" do
     it "returns http success" do
       get 'splash'
