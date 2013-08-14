@@ -20,7 +20,11 @@ Mencken Tarot Setup
 
 * zt deploys to heroku, then tests
 
-* gitty:  gb to see branches, gic to commit, gm to merge back to master (do before a 'zt')
+* gitty:  
+  gb to see branches, 
+  gic to commit, 
+  gm to merge back to master (do before a 'zt'),
+  gstat - get status (not gs which is ghostscript)
 
 * git setup:
   git remote add origin https://github.com/jashmead/mencken-tarot.git
@@ -29,3 +33,4 @@ Mencken Tarot Setup
 * heroku setup:
   heroku create
   -- then fix heroku to point to mencken-tarot as git repo
+  -- have to add a "root to" element to routes to get heroku to actually put up the page
