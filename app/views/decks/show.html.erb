@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @deck.name %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @deck.summary %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @deck.description %>
+</p>
+
+<p>
+  <strong>Cloned from:</strong>
+  <%= @deck.cloned_from_id %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @deck.person_id %>
+</p>
+
+<p>
+  <strong>Deck status:</strong>
+  <%= @deck.deck_status %>
+</p>
+
+<%= link_to 'Edit', edit_deck_path(@deck) %> |
+<%= link_to 'Back', decks_path %>

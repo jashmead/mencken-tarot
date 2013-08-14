@@ -1,4 +1,6 @@
 Mt::Application.routes.draw do
+  resources :decks
+
   resources :people
 
   get "static_pages/about"
