@@ -13,9 +13,11 @@ Mt::Application.routes.draw do
 
   resources :people
 
+  # maybe we want a Mencken page
   get "static_pages/about"
   get "static_pages/contact"
   get "static_pages/help"
+  # history of Tarot
   get "static_pages/history"
   get "static_pages/plans"
   get "static_pages/splash"

@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def history
   end
 
+  def plan
+  end
+
   def splash
   end
 end
