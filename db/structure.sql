@@ -52,6 +52,27 @@ CREATE TABLE cards (
 
 
 --
+-- Name: COLUMN cards.card_image_upright; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON COLUMN cards.card_image_upright IS 'shift to filename, if performance becomes an issue';
+
+
+--
+-- Name: COLUMN cards.card_image_reversed; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON COLUMN cards.card_image_reversed IS 'Default to flip of main. Shift to filename, if performance becomes an issue';
+
+
+--
+-- Name: COLUMN cards.card_thumbnail; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON COLUMN cards.card_thumbnail IS 'Also horizontal, vertical, & spot forms.  Shift to filename, if performance becomes an issue';
+
+
+--
 -- Name: cards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -227,6 +248,13 @@ CREATE TABLE readings (
     spread_id integer,
     deck_id integer
 );
+
+
+--
+-- Name: TABLE readings; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON TABLE readings IS 'A reading starts with a spread.';
 
 
 --
@@ -426,6 +454,86 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 
 
 --
+-- Name: card2deck_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY cards
+    ADD CONSTRAINT card2deck_fk FOREIGN KEY (deck_id) REFERENCES cards(id);
+
+
+--
+-- Name: deck2person_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY decks
+    ADD CONSTRAINT deck2person_fk FOREIGN KEY (person_id) REFERENCES people(id);
+
+
+--
+-- Name: play2card_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY plays
+    ADD CONSTRAINT play2card_fk FOREIGN KEY (card_id) REFERENCES cards(id);
+
+
+--
+-- Name: play2reading_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY plays
+    ADD CONSTRAINT play2reading_fk FOREIGN KEY (reading_id) REFERENCES readings(id);
+
+
+--
+-- Name: position2spread_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY positions
+    ADD CONSTRAINT position2spread_fk FOREIGN KEY (spread_id) REFERENCES spreads(id);
+
+
+--
+-- Name: reading2deck_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY readings
+    ADD CONSTRAINT reading2deck_fk FOREIGN KEY (deck_id) REFERENCES decks(id);
+
+
+--
+-- Name: reading2person_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY readings
+    ADD CONSTRAINT reading2person_fk FOREIGN KEY (person_id) REFERENCES people(id);
+
+
+--
+-- Name: reading2spread_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY readings
+    ADD CONSTRAINT reading2spread_fk FOREIGN KEY (spread_id) REFERENCES spreads(id);
+
+
+--
+-- Name: spread2deck_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY spreads
+    ADD CONSTRAINT spread2deck_fk FOREIGN KEY (deck_id) REFERENCES decks(id);
+
+
+--
+-- Name: spread2person_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY spreads
+    ADD CONSTRAINT spread2person_fk FOREIGN KEY (person_id) REFERENCES people(id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
@@ -458,3 +566,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130814225811');
 INSERT INTO schema_migrations (version) VALUES ('20130814230225');
 
 INSERT INTO schema_migrations (version) VALUES ('20130814230617');
+
+INSERT INTO schema_migrations (version) VALUES ('20130815144047');
