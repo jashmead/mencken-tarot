@@ -1,6 +1,8 @@
 Mt::Application.routes.draw do
+  ## we expect a "comments" table, to get:  discussion forums & also philosophical inquiries
   resources :plays
 
+  ## readings will get:  take a reading, build a reading, send a reading, how to do a reading, how to interpret
   resources :readings
 
   resources :positions
@@ -9,8 +11,10 @@ Mt::Application.routes.draw do
 
   resources :cards
 
+  ## decks will get:  favorites, recent, popular, mencken
   resources :decks
 
+  ## people will get status of: anonymous, mencken, admin, registered, & subscriber
   resources :people
 
   # maybe we want a Mencken page
@@ -18,8 +22,9 @@ Mt::Application.routes.draw do
   get "static_pages/contact"
   get "static_pages/help"
   # history of Tarot
-  get "static_pages/history"
-  get "static_pages/plans"
+  get "static_pages/history"  ## complex page
+  # add in "history of mencken"
+  get "static_pages/plans"    ## low priority, may eliminate
   get "static_pages/splash"
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,20 @@
+Layout:
+
+main layout:
+
+  two, three, two
+  -- overlapping
+  -- each card has close, info, reverse, reselect
+  -- holes in four corners go to:
+    decks top left, share/clear/randomize top right, favorites bottom left or right
+
+  below the spread:
+    line with diamond shape on it & just below:
+      major arcana, swords, wands, pentacles, suits
+
+  then two rows of overalpping cards, which expand to current as you hoever
+    11 + 11 for Major arcanc
+    5 + 9 for suits
+
+  drag & drop up to spread
+    

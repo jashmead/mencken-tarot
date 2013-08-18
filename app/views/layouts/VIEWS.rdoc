@@ -1,0 +1,40 @@
+Standard layout:
+
+Top tier:
+  * Logo -- to left
+  * Account stuff -- to right:  login/create account or username (+ settings, logout, whatever)
+
+Menu tier:
+  Each main options goes under one of these drop downs:
+    Reading&, Gallery&, Friends of Mencken&, History&, Mencken Tarot&
+
+Card tier:
+  done as reading
+
+Reading:
+  Take a reading
+  Build a reading
+  Send a reading
+  How to interpret a reading
+
+Gallery:
+  Meaning of art in the tarot
+  big beautiful spreads of our decks
+  recent
+  highly rated
+  popular
+
+Friends of Mencken (guild)
+  Discussion forums
+  Trending ... or popular ... or ...
+  Philosophical inquiries
+  An ongoing dialogue on the perspicacity of one Mr. H. L. Mencken
+
+History
+  History of the Tarot
+  History of Mencken
+
+Site
+  About
+  Contact
+  Help
